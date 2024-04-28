@@ -2,7 +2,7 @@
 
 [project]
 name = "pyzdoc"
-version = "0.0.0"
+version = "2024.4.29"
 description = "A collection of (cool) scripts / utilities"
 
 authors = [

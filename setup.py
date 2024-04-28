@@ -59,7 +59,7 @@ zdoc_dll = Library(
 
 setup_args = dict(
     name=NAME,
-    version="0.0.0",
+    version="2024.4.29",
     description="A collection of (cool) scripts / utilities",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
