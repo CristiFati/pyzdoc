@@ -3,10 +3,10 @@ Module containing package constants.
 
 NOTE:
 Due to the fact that for MessageBox there had to be added ~50 of them,
-it's not scalable, so they (or the entiremodule)
+it's not scalable, so they (or the entire module)
 might be removed in the future.
 
-Please use some specialized packages exporing them.
+Please use some specialized packages (if any) that export them.
 For MessageBox, win32con can be used (https://github.com/mhammond/pywin32).
 
 """

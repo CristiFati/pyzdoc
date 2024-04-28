@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\pyzdoc\src\zdoc_nix.c">
+    <ClCompile Include="..\pyzdoc\src\zdoc_nix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\pyzdoc\src\zdoc_win.c">
+    <ClCompile Include="..\pyzdoc\src\zdoc_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

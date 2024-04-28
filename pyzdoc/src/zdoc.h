@@ -26,6 +26,7 @@ extern "C" {
 #  if defined(_WIN32)
 
 ZDOC_EXPORT_API int MessageBoxXY(HWND hWnd, LPCWSTR lpText, LPCWSTR lpCaption, UINT uType, int x, int y);
+ZDOC_EXPORT_API int clearHooks();
 
 #  else  // _WIN32
 #  endif  // _WIN32

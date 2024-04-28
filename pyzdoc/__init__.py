@@ -1,3 +1,4 @@
+import atexit
 import ctypes as cts
 import os
 import sys
@@ -40,6 +41,12 @@ if __IS_WIN:
             x if x is not None else 0x80000000,
             y if y is not None else 0x80000000,
         )
+
+    __clearHooks = __DLL.clearHooks
+    __clearHooks.argtypes = ()
+    __clearHooks.restype = cts.c_int
+    atexit.register(__clearHooks)
+    del __clearHooks
 
     __all__ = ("MessageBox",)
 else:  # Nix

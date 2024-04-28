@@ -21,13 +21,15 @@ else:
     _EXT = ".so"
     _SUF = "nix"
 
+
 # Get rid of sysconfig's EXT_SUFFIX (e.g.: .cp310-win_amd64)
 class build_dll(build_ext):
     def get_ext_filename(self, ext_name):
         return os.path.join(*ext_name.split(".")) + _EXT
 
 
-class bdist_wheel_noext(bdist_wheel):
+# Create generic .whl as the .dll doesn't depend on Python
+class bdist_wheel_dll(bdist_wheel):
     def get_tag(self):
         return (
             "py3",
@@ -38,7 +40,7 @@ class bdist_wheel_noext(bdist_wheel):
 
 zdoc_dll = Library(
     (NAME + ".zdoc"),
-    sources=["pyzdoc/src/zdoc_{:s}.c".format(_SUF)],
+    sources=["pyzdoc/src/zdoc_{:s}.cpp".format(_SUF)],
     include_dirs=["pyzdoc/src"],
     define_macros=[
         ("UNICODE", None),
@@ -80,7 +82,7 @@ setup_args = dict(
     packages=find_packages(include=["pyzdoc"], exclude=["src", "__pycache__"]),
     cmdclass={
         "build_ext": build_dll,
-        "bdist_wheel": bdist_wheel_noext,
+        "bdist_wheel": bdist_wheel_dll,
     },
     ext_modules=[zdoc_dll],
 )
