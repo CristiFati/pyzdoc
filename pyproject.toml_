@@ -18,7 +18,7 @@ license = {file = "LICENSE"}
 requires-python = ">=3"
 
 classifiers = [
-  "Development Status :: 5",
+  "Development Status :: 5 - Production/Stable",
   "License :: OSI Approved :: MIT License",
   "Operating System :: Microsoft :: Windows",
   "Programming Language :: C",
@@ -26,7 +26,6 @@ classifiers = [
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: Implementation :: CPython",
   "Topic :: Software Development",
-  "Typing :: Typed",
 ]
 
 [build-system]
