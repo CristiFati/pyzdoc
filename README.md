@@ -1,3 +1,5 @@
+# Functionality is now part of [\[GitHub\]: CristiFati/pycfutils](https://github.com/CristiFati/pycfutils).
+
 # *PyZDoc*
 
 A collection of (cool) scripts / utilities
